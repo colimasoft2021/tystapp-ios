@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Expense List Pop Up View Controller-->
+        <scene sceneID="lgq-DL-oxB">
+            <objects>
+                <viewController storyboardIdentifier="ExpenseListPopUpViewController" id="2n2-Di-PvK" customClass="ExpenseListPopUpViewController" customModule="TYST" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x4N-dJ-0gw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCq-Sr-vnf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX2-73-x4f">
+                                <rect key="frame" x="30" y="327.5" width="354" height="241"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please verify all transaction's estimated tax and category." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txo-xc-7eg">
+                                        <rect key="frame" x="10" y="20" width="334" height="38.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="923-n3-2Xa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tax_notapplied" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-JV-aRu">
+                                        <rect key="frame" x="159.5" y="73.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="9Zj-4M-Exu"/>
+                                            <constraint firstAttribute="height" constant="35" id="MTQ-Pl-46i"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Above red indicator indicate that this transaction requires modification according to the receipt or no sales tax was applied." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gus-bs-tOn">
+                                        <rect key="frame" x="15" y="118.5" width="324" height="57.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="xHn-bm-csV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiA-gr-b5k" customClass="WLButton" customModule="TYST" customModuleProvider="target">
+                                        <rect key="frame" x="137" y="196" width="80" height="35"/>
+                                        <color key="backgroundColor" name="ButtonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="AL2-nw-i5g"/>
+                                            <constraint firstAttribute="height" constant="35" id="JPa-Rx-ldo"/>
+                                            <constraint firstAttribute="width" constant="80" id="paY-SO-3ya"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="OK"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnOkAction:" destination="2n2-Di-PvK" eventType="touchUpInside" id="Fxu-yZ-Bbr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="gus-bs-tOn" firstAttribute="leading" secondItem="SX2-73-x4f" secondAttribute="leading" constant="15" id="2Yb-Zi-DCP"/>
+                                    <constraint firstItem="txo-xc-7eg" firstAttribute="leading" secondItem="SX2-73-x4f" secondAttribute="leading" constant="10" id="3Pw-CO-9CW"/>
+                                    <constraint firstItem="TiA-gr-b5k" firstAttribute="centerX" secondItem="SX2-73-x4f" secondAttribute="centerX" id="GGu-OY-aur"/>
+                                    <constraint firstAttribute="bottom" secondItem="TiA-gr-b5k" secondAttribute="bottom" constant="10" id="LBf-ID-hfe"/>
+                                    <constraint firstItem="gus-bs-tOn" firstAttribute="top" secondItem="txo-xc-7eg" secondAttribute="bottom" constant="60" id="On4-XS-dXQ"/>
+                                    <constraint firstItem="ffS-JV-aRu" firstAttribute="centerX" secondItem="SX2-73-x4f" secondAttribute="centerX" id="RBE-pd-fXQ"/>
+                                    <constraint firstItem="TiA-gr-b5k" firstAttribute="top" secondItem="gus-bs-tOn" secondAttribute="bottom" constant="20" id="Tob-bl-Yjq"/>
+                                    <constraint firstAttribute="trailing" secondItem="gus-bs-tOn" secondAttribute="trailing" constant="15" id="aCg-YF-Iy0"/>
+                                    <constraint firstItem="ffS-JV-aRu" firstAttribute="top" secondItem="txo-xc-7eg" secondAttribute="bottom" constant="15" id="bje-Ht-XIH"/>
+                                    <constraint firstItem="txo-xc-7eg" firstAttribute="top" secondItem="SX2-73-x4f" secondAttribute="top" constant="20" id="gAS-ug-zQk"/>
+                                    <constraint firstAttribute="trailing" secondItem="txo-xc-7eg" secondAttribute="trailing" constant="10" id="jIJ-G4-f4z"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf9-kY-wRs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <action selector="btnOkAction:" destination="2n2-Di-PvK" eventType="touchUpInside" id="5hI-DS-mNT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RI5-PY-9eu" firstAttribute="trailing" secondItem="SX2-73-x4f" secondAttribute="trailing" constant="30" id="4yp-Vf-FrV"/>
+                            <constraint firstAttribute="bottom" secondItem="aCq-Sr-vnf" secondAttribute="bottom" id="7Ph-DR-LpG"/>
+                            <constraint firstItem="aCq-Sr-vnf" firstAttribute="leading" secondItem="x4N-dJ-0gw" secondAttribute="leading" id="9ty-j7-9uV"/>
+                            <constraint firstItem="Jf9-kY-wRs" firstAttribute="leading" secondItem="RI5-PY-9eu" secondAttribute="leading" id="J0l-Kj-AX5"/>
+                            <constraint firstAttribute="trailing" secondItem="aCq-Sr-vnf" secondAttribute="trailing" id="Kjc-Fb-mJH"/>
+                            <constraint firstItem="aCq-Sr-vnf" firstAttribute="top" secondItem="x4N-dJ-0gw" secondAttribute="top" id="P7f-BB-7S1"/>
+                            <constraint firstItem="SX2-73-x4f" firstAttribute="centerY" secondItem="x4N-dJ-0gw" secondAttribute="centerY" id="c5e-Bn-5N0"/>
+                            <constraint firstItem="Jf9-kY-wRs" firstAttribute="top" secondItem="RI5-PY-9eu" secondAttribute="top" id="khb-F0-Wi8"/>
+                            <constraint firstItem="SX2-73-x4f" firstAttribute="leading" secondItem="RI5-PY-9eu" secondAttribute="leading" constant="30" id="rWY-Vm-1Rj"/>
+                            <constraint firstItem="RI5-PY-9eu" firstAttribute="trailing" secondItem="Jf9-kY-wRs" secondAttribute="trailing" id="z46-SN-y1H"/>
+                            <constraint firstItem="RI5-PY-9eu" firstAttribute="bottom" secondItem="Jf9-kY-wRs" secondAttribute="bottom" id="zeM-9e-3t6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RI5-PY-9eu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sq-ak-8v4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="-155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tax_notapplied" width="21" height="28"/>
+        <namedColor name="ButtonColor">
+            <color red="0.68235294117647061" green="0.13725490196078433" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

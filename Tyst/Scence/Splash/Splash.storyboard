@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cQ3-VG-yaM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="pud-rl-WfF">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="cQ3-VG-yaM" customClass="SplashViewController" customModule="TYST" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PpR-aC-Xx5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="EdC-3g-h4D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="D6o-Bd-j6a">
+                                <rect key="frame" x="0.0" y="229.5" width="375" height="108"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your Sales Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb5-Iy-FbP">
+                                <rect key="frame" x="100" y="321.5" width="175.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="BackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When life doesn't Have Time for Receipts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhW-Ev-XZP">
+                                <rect key="frame" x="50" y="495.5" width="275" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" name="BackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EdC-3g-h4D" firstAttribute="leading" secondItem="PpR-aC-Xx5" secondAttribute="leading" id="EDZ-IO-JXh"/>
+                            <constraint firstItem="D6o-Bd-j6a" firstAttribute="leading" secondItem="mOa-uZ-4QY" secondAttribute="leading" id="HY6-Fa-rGh"/>
+                            <constraint firstAttribute="trailing" secondItem="EdC-3g-h4D" secondAttribute="trailing" id="OhQ-EW-xaj"/>
+                            <constraint firstItem="YhW-Ev-XZP" firstAttribute="leading" secondItem="mOa-uZ-4QY" secondAttribute="leading" constant="50" id="R3U-ti-fJ5"/>
+                            <constraint firstItem="Fb5-Iy-FbP" firstAttribute="centerY" secondItem="PpR-aC-Xx5" secondAttribute="centerY" id="T7c-gp-k8s"/>
+                            <constraint firstItem="YhW-Ev-XZP" firstAttribute="top" secondItem="Fb5-Iy-FbP" secondAttribute="bottom" constant="150" id="bmy-U2-4o5"/>
+                            <constraint firstItem="EdC-3g-h4D" firstAttribute="top" secondItem="PpR-aC-Xx5" secondAttribute="top" id="cXn-0w-xlz"/>
+                            <constraint firstItem="mOa-uZ-4QY" firstAttribute="trailing" secondItem="D6o-Bd-j6a" secondAttribute="trailing" id="exL-Gi-7KD"/>
+                            <constraint firstAttribute="bottom" secondItem="EdC-3g-h4D" secondAttribute="bottom" id="m7d-Ws-Czq"/>
+                            <constraint firstItem="mOa-uZ-4QY" firstAttribute="trailing" secondItem="YhW-Ev-XZP" secondAttribute="trailing" constant="50" id="mKn-H2-HhJ"/>
+                            <constraint firstItem="D6o-Bd-j6a" firstAttribute="centerY" secondItem="mOa-uZ-4QY" secondAttribute="centerY" constant="-50" id="ndf-Ko-uSt"/>
+                            <constraint firstItem="Fb5-Iy-FbP" firstAttribute="centerX" secondItem="PpR-aC-Xx5" secondAttribute="centerX" id="rC1-Ji-ssD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mOa-uZ-4QY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKZ-6v-P05" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="-88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogo" width="260" height="54"/>
+        <image name="background" width="414" height="896"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

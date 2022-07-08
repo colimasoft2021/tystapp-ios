@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='TystUITests.xctest' tests='23' failures='0'>
+  <testsuite name='TystUITests.WL_1_SignUpEmailUITests' tests='7' failures='0'>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test01FirstNameValidation' time='57.198'/>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test02LastNameValidation' time='59.140'/>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test03EmailValidation' time='73.382'/>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test05MobileValidation' time='75.546'/>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test09PasswordValidation' time='78.901'/>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test10ConfirmPasswordValidation' time='88.881'/>
+    <testcase classname='TystUITests.WL_1_SignUpEmailUITests' name='test11CheckTermsCondition' time='92.473'/>
+  </testsuite>
+  <testsuite name='TystUITests.WL_3_LoginEmailUITest' tests='4' failures='0'>
+    <testcase classname='TystUITests.WL_3_LoginEmailUITest' name='test1EmailValidiations' time='32.538'/>
+    <testcase classname='TystUITests.WL_3_LoginEmailUITest' name='test2PasswordValidiations' time='34.577'/>
+    <testcase classname='TystUITests.WL_3_LoginEmailUITest' name='test3Login' time='45.971'/>
+    <testcase classname='TystUITests.WL_3_LoginEmailUITest' name='test4Logout' time='39.034'/>
+  </testsuite>
+  <testsuite name='TystUITests.WL_4_EditProfileEmailUITest' tests='4' failures='0'>
+    <testcase classname='TystUITests.WL_4_EditProfileEmailUITest' name='test1Login' time='39.992'/>
+    <testcase classname='TystUITests.WL_4_EditProfileEmailUITest' name='test3FirstNameValidation' time='36.041'/>
+    <testcase classname='TystUITests.WL_4_EditProfileEmailUITest' name='test4LastNameValidation' time='37.589'/>
+    <testcase classname='TystUITests.WL_4_EditProfileEmailUITest' name='test6MobileValidation' time='49.233'/>
+  </testsuite>
+  <testsuite name='TystUITests.WL_5_ChangePasswordEmailUITest' tests='4' failures='0'>
+    <testcase classname='TystUITests.WL_5_ChangePasswordEmailUITest' name='test1CheckEmptyOldPassword' time='45.120'/>
+    <testcase classname='TystUITests.WL_5_ChangePasswordEmailUITest' name='test2CheckNewPasswordValidiations' time='57.952'/>
+    <testcase classname='TystUITests.WL_5_ChangePasswordEmailUITest' name='test3CheckConfirmPasswordValidiations' time='58.469'/>
+    <testcase classname='TystUITests.WL_5_ChangePasswordEmailUITest' name='test4CheckOldPasswordValidiation' time='25.420'/>
+  </testsuite>
+  <testsuite name='TystUITests.WL_6_SendFeedbackEmailUITest' tests='1' failures='0'>
+    <testcase classname='TystUITests.WL_6_SendFeedbackEmailUITest' name='test1SendFeedback' time='43.029'/>
+  </testsuite>
+  <testsuite name='TystUITests.WL_7_AdsEmailUITest' tests='2' failures='0'>
+    <testcase classname='TystUITests.WL_7_AdsEmailUITest' name='test1DisplayBeforeRemove' time='22.204'/>
+    <testcase classname='TystUITests.WL_7_AdsEmailUITest' name='test2RemoveAds' time='35.534'/>
+  </testsuite>
+  <testsuite name='TystUITests.WL_8_ForgotPasswordEmailUITest' tests='1' failures='0'>
+    <testcase classname='TystUITests.WL_8_ForgotPasswordEmailUITest' name='test1ForgotPasswordFlow' time='78.976'/>
+  </testsuite>
+</testsuites>

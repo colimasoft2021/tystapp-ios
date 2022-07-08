@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>539448343089-hnuvgs0n1ee08nma1ihcifjp2e4rosd1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.539448343089-hnuvgs0n1ee08nma1ihcifjp2e4rosd1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>539448343089-t0ret75g4fhrqc82pomhe727ficdvkq7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8_KE26QUpJrJjZ49fkoKZNyG7y-Njbz0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>539448343089</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tyst</string>
+	<key>PROJECT_ID</key>
+	<string>tyst-12a79</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tyst-12a79.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:539448343089:ios:cb00faff547b56df623310</string>
+	<key>DATABASE_URL</key>
+	<string>https://tyst-12a79.firebaseio.com</string>
+</dict>
+</plist>

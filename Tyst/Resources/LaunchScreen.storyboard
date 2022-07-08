@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6Z-CL-Xxl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="GBV-zL-n9d">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="P6Z-CL-Xxl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IvQ-Pw-tFg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="X4Q-LJ-nnS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="na1-Lk-jiM">
+                                <rect key="frame" x="0.0" y="349" width="414" height="108"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your Sales Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wia-hg-NaC">
+                                <rect key="frame" x="119.5" y="436" width="175.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="BackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When life doesn't Have Time for Receipts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6C-1y-09v">
+                                <rect key="frame" x="50" y="610" width="314" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" name="BackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="na1-Lk-jiM" firstAttribute="centerY" secondItem="KF2-iB-pHU" secondAttribute="centerY" constant="-50" id="3R7-cI-EUY"/>
+                            <constraint firstAttribute="bottom" secondItem="X4Q-LJ-nnS" secondAttribute="bottom" id="AKj-Gq-9pT"/>
+                            <constraint firstItem="na1-Lk-jiM" firstAttribute="leading" secondItem="KF2-iB-pHU" secondAttribute="leading" id="C3Y-4O-mYo"/>
+                            <constraint firstItem="KF2-iB-pHU" firstAttribute="trailing" secondItem="g6C-1y-09v" secondAttribute="trailing" constant="50" id="FzB-wg-BIf"/>
+                            <constraint firstItem="g6C-1y-09v" firstAttribute="top" secondItem="wia-hg-NaC" secondAttribute="bottom" constant="150" id="GJX-86-k4k"/>
+                            <constraint firstAttribute="trailing" secondItem="X4Q-LJ-nnS" secondAttribute="trailing" id="LpL-yO-TmC"/>
+                            <constraint firstItem="X4Q-LJ-nnS" firstAttribute="leading" secondItem="IvQ-Pw-tFg" secondAttribute="leading" id="Lvg-DP-FbU"/>
+                            <constraint firstItem="wia-hg-NaC" firstAttribute="centerY" secondItem="IvQ-Pw-tFg" secondAttribute="centerY" id="RD4-sZ-iUw"/>
+                            <constraint firstItem="wia-hg-NaC" firstAttribute="centerX" secondItem="IvQ-Pw-tFg" secondAttribute="centerX" id="Ryt-eh-xFT"/>
+                            <constraint firstItem="g6C-1y-09v" firstAttribute="leading" secondItem="KF2-iB-pHU" secondAttribute="leading" constant="50" id="S9I-cx-0Lg"/>
+                            <constraint firstItem="KF2-iB-pHU" firstAttribute="trailing" secondItem="na1-Lk-jiM" secondAttribute="trailing" id="nJf-dO-k6Z"/>
+                            <constraint firstItem="X4Q-LJ-nnS" firstAttribute="top" secondItem="IvQ-Pw-tFg" secondAttribute="top" id="yPr-G1-47g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KF2-iB-pHU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERb-hk-uUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="-72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogo" width="260" height="54"/>
+        <image name="background" width="414" height="896"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.92941176470588238" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
