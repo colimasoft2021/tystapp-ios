@@ -184,10 +184,10 @@ class SignUpViewController: BaseViewController, LinkOAuthHandling {
         } else if isSocialType == SocialLoginType.google.rawValue {
             txtFieldPassword.isHidden = true
             txtFieldConfirmPassword.isHidden = true
-            txtFieldFirstName.text = googleDict.profile.givenName ?? ""
-            txtFieldLastName.text = googleDict.profile.familyName ?? ""
-            txtFieldEmail.text = googleDict.profile.email ?? ""
-            self.imgProfile.setImage(with: googleDict.profile.imageURL(withDimension: 500).absoluteString, placeHolder: #imageLiteral(resourceName: "signup_default_user"))
+            txtFieldFirstName.text = googleDict.profile?.givenName ?? ""
+            txtFieldLastName.text = googleDict.profile?.familyName ?? ""
+            txtFieldEmail.text = googleDict.profile?.email ?? ""
+            self.imgProfile.setImage(with: googleDict.profile?.imageURL(withDimension: 500)?.absoluteString, placeHolder: #imageLiteral(resourceName: "signup_default_user"))
             socialLoginId = googleDict.userID ?? ""
             let img = imgProfile.image ?? UIImage()
             self.imgProfile.setBorder(color: #colorLiteral(red: 0.6666666667, green: 0.6666666667, blue: 0.6666666667, alpha: 1), size: 1)

@@ -11,9 +11,7 @@ target 'Tyst' do
     pod 'SwiftLint'
     
     # Fabric & Crashlytics
-    #pod 'Fabric'
-    #pod 'Crashlytics'
-    pod 'FirebaseCrashlytics'
+    pod 'Firebase/Crashlytics'
     
     # Network
     pod 'Alamofire', '~> 4.9.1'
@@ -40,7 +38,7 @@ target 'Tyst' do
     pod 'SVPinView', '~> 1.0'
     
     # Google sign in
-    pod 'GoogleSignIn', '~> 4.1.1'
+    pod 'GoogleSignIn', '>= 6.0.0'
     
     # Facebook sign in
     pod 'FBSDKCoreKit'

@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //for upload make it false
         //for mobile make it true
-        Fabric.sharedSDK().debug = false
+        //Fabric.sharedSDK().debug = false
         
         return true
     }
@@ -132,9 +132,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let aHandled = ApplicationDelegate.shared.application(app, open: url, options: options)
             return aHandled
         } else {
-            return GIDSignIn.sharedInstance().handle(url as URL?,
-                                                     sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                                                     annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+            return GIDSignIn.sharedInstance.handle(url)
+//            return GIDSignIn.sharedInstance().handle(url as URL?,
+//                                                     sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+//                                                     annotation: options[UIApplication.OpenURLOptionsKey.annotation])
         }
     }
     

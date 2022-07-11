@@ -135,14 +135,33 @@ class LoginEmailAndSocialViewController: BaseViewController {
     // SetUpLayout initial UI setup
     func setUpLayout() {
         // self.navigationItem.title = AlertMessage.loginTitle
-        GIDSignIn.sharedInstance()?.clientID = ServiceApiKey.Google.kClientID
-        GIDSignIn.sharedInstance()?.delegate = self
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        //GIDSignIn.sharedInstance().presentingViewController = self
+        //GIDSignIn.sharedInstance()?.clientID = ServiceApiKey.Google.kClientID
+        //GIDSignIn.sharedInstance()?.delegate = self
+        //GIDSignIn.sharedInstance()?.uiDelegate = self
         
         if #available(iOS 13.0, *) {
             self.btnApple.isHidden = false
         } else {
             self.btnApple.isHidden = true
+        }
+    }
+    
+    func performGoogleAccountLink() {
+        let clientID = ServiceApiKey.Google.kClientID
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+    
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
+            if error != nil {
+                print("(error.localizedDescription)")
+            } else {
+                if let user = user {
+                    self.socialLoginType = SocialLoginType.google.rawValue
+                    self.googleDict = user
+                    self.callSocialLoginApi(type: self.socialLoginType, id: user.userID!)
+                }
+            }
         }
     }
     
@@ -200,8 +219,10 @@ class LoginEmailAndSocialViewController: BaseViewController {
     
     /// Google Login
     func loginWithGoogle() {
-        GIDSignIn.sharedInstance()?.signOut()
-        GIDSignIn.sharedInstance().signIn()
+        GIDSignIn.sharedInstance.signOut()
+        //GIDSignIn.sharedInstance()?.signOut()
+        //GIDSignIn.sharedInstance().signIn()
+        performGoogleAccountLink()
     }
     
     func pladeApiConfiguration() {
@@ -385,41 +406,45 @@ class LoginEmailAndSocialViewController: BaseViewController {
     }
 }
 
-extension LoginEmailAndSocialViewController: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        if error != nil {
-            print("(error.localizedDescription)")
-        } else {
-            if let user = user {
-                self.socialLoginType = SocialLoginType.google.rawValue
-                self.googleDict = user
-                self.callSocialLoginApi(type: self.socialLoginType, id: user.userID)
-            }
-        }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
-              withError error: Error!) {
-    }
-}
+//extension LoginEmailAndSocialViewController: GIDSignInDelegate {
+//    // MARK: -
+//    // MARK: Mueva la lógica de signIn:didSignInForUser:withError: al bloque de devolución de llamada de signInWithConfiguration:presentingViewController:callback:
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+//              withError error: Error!) {
+//        if error != nil {
+//            print("(error.localizedDescription)")
+//        } else {
+//            if let user = user {
+//                self.socialLoginType = SocialLoginType.google.rawValue
+//                self.googleDict = user
+//                self.callSocialLoginApi(type: self.socialLoginType, id: user.userID)
+//            }
+//        }
+//    }
+//
+//    // MARK: -
+//    // MARK: Mover la lógica de signIn:didDisconnectWithUser:withError: al bloque de devolución de llamada de disconnectWithCallback:
+//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+//              withError error: Error!) {
+//    }
+//}
 
-extension LoginEmailAndSocialViewController: GIDSignInUIDelegate {
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-    }
-    
-    // Present a view that prompts the user to sign in with Google
-    func sign( _ signIn: GIDSignIn!,
-               present viewController: UIViewController!) {
-        self.present(viewController, animated: true, completion: nil)
-    }
-    
-    // Dismiss the "Sign in with Google" view
-    func sign( _ signIn: GIDSignIn!,
-               dismiss viewController: UIViewController!) {
-        self.dismiss(animated: true, completion: nil)
-    }
-}
+//extension LoginEmailAndSocialViewController: GIDSignInUIDelegate {
+//    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+//    }
+//
+//    // Present a view that prompts the user to sign in with Google
+//    func sign( _ signIn: GIDSignIn!,
+//               present viewController: UIViewController!) {
+//        self.present(viewController, animated: true, completion: nil)
+//    }
+//
+//    // Dismiss the "Sign in with Google" view
+//    func sign( _ signIn: GIDSignIn!,
+//               dismiss viewController: UIViewController!) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
+//}
 
 @available(iOS 12.0, *)
 extension LoginEmailAndSocialViewController : ASAuthorizationControllerDelegate {

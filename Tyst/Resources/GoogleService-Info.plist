@@ -7,7 +7,7 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.539448343089-hnuvgs0n1ee08nma1ihcifjp2e4rosd1</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>539448343089-t0ret75g4fhrqc82pomhe727ficdvkq7.apps.googleusercontent.com</string>
+	<string>539448343089-7851co39pc3iisgsq488ma0c26n9lvcr.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyC8_KE26QUpJrJjZ49fkoKZNyG7y-Njbz0</string>
 	<key>GCM_SENDER_ID</key>
@@ -21,18 +21,20 @@
 	<key>STORAGE_BUCKET</key>
 	<string>tyst-12a79.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:539448343089:ios:cb00faff547b56df623310</string>
 	<key>DATABASE_URL</key>
 	<string>https://tyst-12a79.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-5963823178389539~1764140400</string>
 </dict>
 </plist>

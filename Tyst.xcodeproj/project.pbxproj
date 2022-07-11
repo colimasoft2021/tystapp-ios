@@ -49,7 +49,6 @@
 		2754667C24093AE600685DA6 /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754667624093AE600685DA6 /* CategoryInteractor.swift */; };
 		2754667E24093C0100685DA6 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754667D24093C0100685DA6 /* CategoryTableViewCell.swift */; };
 		2754668024094AA300685DA6 /* CategoryAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754667F24094AA300685DA6 /* CategoryAPIRouter.swift */; };
-		2765572C236C19CB008E58B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2765572B236C19CB008E58B9 /* GoogleService-Info.plist */; };
 		276921C4237D7070005F6F06 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276921C3237D7070005F6F06 /* CalendarViewController.swift */; };
 		276921C6237D708B005F6F06 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276921C5237D708B005F6F06 /* Calendar.storyboard */; };
 		276BA793238F955C00694C27 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276BA792238F955C00694C27 /* IAPManager.swift */; };
@@ -278,6 +277,7 @@
 		27FFD42F2431C26A0092D695 /* CategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFD42E2431C2690092D695 /* CategoryListTableViewCell.swift */; };
 		5D5BE528286A056800748D7A /* AppDelegate+OAuthSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BE527286A056800748D7A /* AppDelegate+OAuthSupport.swift */; };
 		5D5BE52A286A2E5300748D7A /* LinkTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BE529286A2E5200748D7A /* LinkTokenGenerator.swift */; };
+		5D9C57B52878D35900425E5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C57B42878D35800425E5C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -353,7 +353,6 @@
 		2754667624093AE600685DA6 /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
 		2754667D24093C0100685DA6 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		2754667F24094AA300685DA6 /* CategoryAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAPIRouter.swift; sourceTree = "<group>"; };
-		2765572B236C19CB008E58B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		276921C3237D7070005F6F06 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		276921C5237D708B005F6F06 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		276BA792238F955C00694C27 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
@@ -595,6 +594,7 @@
 		2F50E363B2176E375B140805 /* Pods-Tyst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tyst.release.xcconfig"; path = "Target Support Files/Pods-Tyst/Pods-Tyst.release.xcconfig"; sourceTree = "<group>"; };
 		5D5BE527286A056800748D7A /* AppDelegate+OAuthSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OAuthSupport.swift"; sourceTree = "<group>"; };
 		5D5BE529286A2E5200748D7A /* LinkTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTokenGenerator.swift; sourceTree = "<group>"; };
+		5D9C57B42878D35800425E5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4425C5958CE616C65CC15AD /* Pods_Tyst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tyst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF50115766BF1B2056B3607C /* Pods-Tyst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tyst.debug.xcconfig"; path = "Target Support Files/Pods-Tyst/Pods-Tyst.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -922,7 +922,7 @@
 		27A126ED236B07CB00290678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2765572B236C19CB008E58B9 /* GoogleService-Info.plist */,
+				5D9C57B42878D35800425E5C /* GoogleService-Info.plist */,
 				27A126EE236B07CB00290678 /* Assets.xcassets */,
 				27A126F1236B07CB00290678 /* LottieFiles */,
 				27A126F4236B07CB00290678 /* Fonts */,
@@ -1465,7 +1465,6 @@
 				27A127D4236B07CC00290678 /* Assets.xcassets in Resources */,
 				27A127F9236B07CC00290678 /* StaticPage.storyboard in Resources */,
 				27A127E5236B07CC00290678 /* Home.storyboard in Resources */,
-				2765572C236C19CB008E58B9 /* GoogleService-Info.plist in Resources */,
 				27A127DD236B07CC00290678 /* Montserrat-Regular.ttf in Resources */,
 				27A127DC236B07CC00290678 /* Montserrat-SemiBold.ttf in Resources */,
 				27FFD4212431BFAE0092D695 /* CategoryList.storyboard in Resources */,
@@ -1492,6 +1491,7 @@
 				27A12841236B07CC00290678 /* GoogleSearch.storyboard in Resources */,
 				276E23312384FD6F00769EEA /* ChangeTax.storyboard in Resources */,
 				27CB2EA723842B34004C93CA /* AddTipViewController.storyboard in Resources */,
+				5D9C57B52878D35900425E5C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
