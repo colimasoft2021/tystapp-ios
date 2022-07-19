@@ -45,6 +45,10 @@ class PlaidAPICall: NSObject {
 
         // With custom configuration using a link_token
         var linkConfiguration = LinkTokenConfiguration(token: linkToken) { success in
+            
+            // Send success.publicToken to your server and exchange it for an access token
+            
+            // Process any metadata according to your needs, e.g. metadata.institution.name
             print("public-token: \(success.publicToken) metadata: \(success.metadata)")
             
             // Handle success, e.g. by storing publicToken with your service
@@ -71,6 +75,7 @@ class PlaidAPICall: NSObject {
         
         linkConfiguration.onExit = { exit in
             if let error = exit.error {
+                
                 NSLog("Failed to link account due to: \(error.localizedDescription)\nmetadata: \(exit.metadata)")
                 self.handleError(error,
                                     metadata: exit.metadata.metadataJSON,

@@ -140,7 +140,6 @@ enum PlaidAPIExternalRouter: RouterProtocol {
 
 func generateLinkToken(request: GenerateLinkToken.Request, completionHandler: @escaping ([GenerateLinkToken.ViewModel?]) -> Void) {
     NetworkService.dataRequest(with: PlaidAPIExternalRouter.generateLinkToken(request: request)) { (response: WSResponse<GenerateLinkToken.ViewModel>?, error: NetworkError?) in
-        print(response)
         if let token = response {
             if let res = token.arrayData {
                 completionHandler(res)
@@ -153,5 +152,3 @@ class facebookUserConsent {
     func givePermission() {
             }
 }
-
-import FBAudienceNetwork

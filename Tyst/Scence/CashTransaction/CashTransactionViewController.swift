@@ -166,7 +166,8 @@ class CashTransactionViewController: BaseViewController {
             controller.total = String((self.lblGrandTotal.text ?? "").dropFirst())
             controller.tipPercentage = self.bankdetail[0].tipPercentage ?? ""
             controller.taxPercentage = "\(Double(self.bankdetail[0].taxPercentage ?? "0.0")! + AppConstants.extraTaxPercentage)"
-            let sheetController = SheetViewController(controller: controller, sizes: [.fixed(250), .halfScreen])
+            let sheetController = SheetViewController(controller: controller, sizes: [.fixed(250), .intrinsic])
+            //SheetViewController(controller: controller, sizes: [.fixed(250), .halfScreen])
             self.present(sheetController, animated: false, completion: nil)
         }
     }
@@ -184,7 +185,8 @@ class CashTransactionViewController: BaseViewController {
             controller.totalAmt = String((self.lblGrandTotal.text ?? "").dropFirst())
             controller.tipPercentage = self.bankdetail[0].tipPercentage ?? ""
             controller.taxPercentage = "\(Double(self.bankdetail[0].taxPercentage ?? "0.0")! + AppConstants.extraTaxPercentage)"
-            let sheetController = SheetViewController(controller: controller, sizes: [.fixed(320), .halfScreen])
+            let sheetController = SheetViewController(controller: controller, sizes: [.fixed(250), .intrinsic])
+            //SheetViewController(controller: controller, sizes: [.fixed(320), .halfScreen])
             self.present(sheetController, animated: false, completion: nil)
         }
     }

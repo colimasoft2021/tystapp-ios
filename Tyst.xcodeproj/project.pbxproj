@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EF27372A42AAC23FE2982A0 /* Pods_Tyst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4425C5958CE616C65CC15AD /* Pods_Tyst.framework */; };
 		2707E4B423CC8D6D005063C6 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2707E4B123CC8D6C005063C6 /* Welcome.storyboard */; };
 		2707E4B523CC8D6D005063C6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2707E4B223CC8D6C005063C6 /* WelcomeViewController.swift */; };
 		2707E4B623CC8D6D005063C6 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2707E4B323CC8D6C005063C6 /* WelcomeCell.swift */; };
@@ -275,9 +274,11 @@
 		27FFD42C2431BFC50092D695 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFD4262431BFC50092D695 /* CategoryListViewController.swift */; };
 		27FFD42D2431BFC50092D695 /* CategoryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFD4272431BFC50092D695 /* CategoryListInteractor.swift */; };
 		27FFD42F2431C26A0092D695 /* CategoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFD42E2431C2690092D695 /* CategoryListTableViewCell.swift */; };
+		5D07B1112887271A0029C648 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D07B110288727190029C648 /* GoogleService-Info.plist */; };
+		5D07B1132887332C0029C648 /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D07B1122887332C0029C648 /* GoogleService-Info .plist */; };
 		5D5BE528286A056800748D7A /* AppDelegate+OAuthSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BE527286A056800748D7A /* AppDelegate+OAuthSupport.swift */; };
 		5D5BE52A286A2E5300748D7A /* LinkTokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BE529286A2E5200748D7A /* LinkTokenGenerator.swift */; };
-		5D9C57B52878D35900425E5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C57B42878D35800425E5C /* GoogleService-Info.plist */; };
+		72692BDD08DB42506EBA1D31 /* Pods_Tyst.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C502E394B4D951363DB617 /* Pods_Tyst.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -591,12 +592,13 @@
 		27FFD4262431BFC50092D695 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		27FFD4272431BFC50092D695 /* CategoryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListInteractor.swift; sourceTree = "<group>"; };
 		27FFD42E2431C2690092D695 /* CategoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewCell.swift; sourceTree = "<group>"; };
-		2F50E363B2176E375B140805 /* Pods-Tyst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tyst.release.xcconfig"; path = "Target Support Files/Pods-Tyst/Pods-Tyst.release.xcconfig"; sourceTree = "<group>"; };
+		5692AF89D944E2F6F4BE9C47 /* Pods-Tyst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tyst.debug.xcconfig"; path = "Target Support Files/Pods-Tyst/Pods-Tyst.debug.xcconfig"; sourceTree = "<group>"; };
+		5D07B110288727190029C648 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5D07B1122887332C0029C648 /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 		5D5BE527286A056800748D7A /* AppDelegate+OAuthSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+OAuthSupport.swift"; sourceTree = "<group>"; };
 		5D5BE529286A2E5200748D7A /* LinkTokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTokenGenerator.swift; sourceTree = "<group>"; };
-		5D9C57B42878D35800425E5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D4425C5958CE616C65CC15AD /* Pods_Tyst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tyst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF50115766BF1B2056B3607C /* Pods-Tyst.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tyst.debug.xcconfig"; path = "Target Support Files/Pods-Tyst/Pods-Tyst.debug.xcconfig"; sourceTree = "<group>"; };
+		88C502E394B4D951363DB617 /* Pods_Tyst.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tyst.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA1CB0BA72EB0C9A4985DB7 /* Pods-Tyst.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tyst.release.xcconfig"; path = "Target Support Files/Pods-Tyst/Pods-Tyst.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -604,7 +606,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF27372A42AAC23FE2982A0 /* Pods_Tyst.framework in Frameworks */,
+				72692BDD08DB42506EBA1D31 /* Pods_Tyst.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,7 +924,8 @@
 		27A126ED236B07CB00290678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5D9C57B42878D35800425E5C /* GoogleService-Info.plist */,
+				5D07B110288727190029C648 /* GoogleService-Info.plist */,
+				5D07B1122887332C0029C648 /* GoogleService-Info .plist */,
 				27A126EE236B07CB00290678 /* Assets.xcassets */,
 				27A126F1236B07CB00290678 /* LottieFiles */,
 				27A126F4236B07CB00290678 /* Fonts */,
@@ -1252,7 +1255,7 @@
 				27E02CA8236181D700C0A0F7 /* TystUITests */,
 				27E02C85236181D600C0A0F7 /* Products */,
 				2BA8AB0201B3F7F4C70B4137 /* Pods */,
-				2FD49DD950A6F6C79A22EF37 /* Frameworks */,
+				2A067FD0C236F8D685BE6FDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1324,21 +1327,21 @@
 			path = CategoryList;
 			sourceTree = "<group>";
 		};
+		2A067FD0C236F8D685BE6FDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88C502E394B4D951363DB617 /* Pods_Tyst.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BA8AB0201B3F7F4C70B4137 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF50115766BF1B2056B3607C /* Pods-Tyst.debug.xcconfig */,
-				2F50E363B2176E375B140805 /* Pods-Tyst.release.xcconfig */,
+				5692AF89D944E2F6F4BE9C47 /* Pods-Tyst.debug.xcconfig */,
+				8DA1CB0BA72EB0C9A4985DB7 /* Pods-Tyst.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		2FD49DD950A6F6C79A22EF37 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D4425C5958CE616C65CC15AD /* Pods_Tyst.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1348,14 +1351,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27E02CAE236181D700C0A0F7 /* Build configuration list for PBXNativeTarget "Tyst" */;
 			buildPhases = (
-				F1BE9138B034010AA52FEFEF /* [CP] Check Pods Manifest.lock */,
+				261E91316F39DBF9161F4909 /* [CP] Check Pods Manifest.lock */,
 				27E02C80236181D600C0A0F7 /* Sources */,
 				27E02C81236181D600C0A0F7 /* Frameworks */,
 				27E02C82236181D600C0A0F7 /* Resources */,
-				2765572D236C23F6008E58B9 /* ShellScript */,
+				5D1DFAF52885C53D009B999C /* ShellScript */,
 				27E472B6238FE8C6001A9F0E /* Embed Frameworks */,
-				006C0D308CCA6D78F8EE2FEF /* [CP] Embed Pods Frameworks */,
-				B7574295A1C01A9E37FEDB63 /* [CP] Copy Pods Resources */,
+				493F72FDE452A543F6BE868F /* [CP] Embed Pods Frameworks */,
+				2B7AD437C714188E9E8FEA5D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1409,7 +1412,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = hb;
 				TargetAttributes = {
 					27E02C83236181D600C0A0F7 = {
@@ -1490,8 +1493,9 @@
 				27A12818236B07CC00290678 /* MyProfile.storyboard in Resources */,
 				27A12841236B07CC00290678 /* GoogleSearch.storyboard in Resources */,
 				276E23312384FD6F00769EEA /* ChangeTax.storyboard in Resources */,
+				5D07B1112887271A0029C648 /* GoogleService-Info.plist in Resources */,
+				5D07B1132887332C0029C648 /* GoogleService-Info .plist in Resources */,
 				27CB2EA723842B34004C93CA /* AddTipViewController.storyboard in Resources */,
-				5D9C57B52878D35900425E5C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1513,59 +1517,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		006C0D308CCA6D78F8EE2FEF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2765572D236C23F6008E58B9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
-		};
-		B7574295A1C01A9E37FEDB63 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1BE9138B034010AA52FEFEF /* [CP] Check Pods Manifest.lock */ = {
+		261E91316F39DBF9161F4909 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1586,6 +1538,59 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2B7AD437C714188E9E8FEA5D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		493F72FDE452A543F6BE868F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tyst/Pods-Tyst-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1DFAF52885C53D009B999C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1881,6 +1886,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1941,6 +1947,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1971,7 +1978,7 @@
 		};
 		27E02CAF236181D700C0A0F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF50115766BF1B2056B3607C /* Pods-Tyst.debug.xcconfig */;
+			baseConfigurationReference = 5692AF89D944E2F6F4BE9C47 /* Pods-Tyst.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tyst/TYST.entitlements;
@@ -1982,7 +1989,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tyst/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1999,7 +2006,7 @@
 		};
 		27E02CB0236181D700C0A0F7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F50E363B2176E375B140805 /* Pods-Tyst.release.xcconfig */;
+			baseConfigurationReference = 8DA1CB0BA72EB0C9A4985DB7 /* Pods-Tyst.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Tyst/TYST.entitlements;
@@ -2010,7 +2017,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tyst/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2042,7 +2049,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tyst.app/Tyst";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TYST.app/TYST";
 			};
 			name = Debug;
 		};
@@ -2063,7 +2070,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tyst.app/Tyst";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TYST.app/TYST";
 			};
 			name = Release;
 		};
@@ -2073,6 +2080,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GFDZ2T5BM5;
 				INFOPLIST_FILE = TystUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2081,6 +2090,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hb.TystUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "TystUITests/TystUITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2095,6 +2105,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GFDZ2T5BM5;
 				INFOPLIST_FILE = TystUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2103,6 +2114,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hb.TystUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "TystUITests/TystUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

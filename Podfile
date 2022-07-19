@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'Tyst' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -10,7 +10,7 @@ target 'Tyst' do
     # Swift Lint : https://github.com/realm/SwiftLint
     pod 'SwiftLint'
     
-    # Fabric & Crashlytics
+    # Crashlytics
     pod 'Firebase/Crashlytics'
     
     # Network
@@ -43,7 +43,6 @@ target 'Tyst' do
     # Facebook sign in
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'
-    pod 'FBAudienceNetwork'
     
     # Google places search
     pod 'GooglePlaces'
@@ -75,7 +74,7 @@ target 'Tyst' do
       installer.pods_project.targets.each do |target|
         if ['IQKeyboardManagerSwift', 'Kingfisher', 'lottie-ios', 'SwiftMessages', 'Alamofire', 'GoogleSignIn', 'FBSDKLoginKit', 'FBSDKCoreKit','InitialsImageView'].include? target.name
           target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '4.2'
+            config.build_settings['SWIFT_VERSION'] = '5.3'
             config.build_settings['CONFIGURATION_BUILD_DIR'] = '$PODS_CONFIGURATION_BUILD_DIR'
           end
         end

@@ -103,7 +103,7 @@ class LoginEmailAndSocialViewController: BaseViewController {
     
     // MARK: Setup
     
-    /// Set Up For API Calls 
+    /// Set Up For API Calls
     private func setup() {
         let viewController = self
         let interactor = LoginEmailAndSocialInteractor()
@@ -115,8 +115,8 @@ class LoginEmailAndSocialViewController: BaseViewController {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
-        
     }
+    
     // MARK: View lifecycle
     
     /// Method is called when view loads
@@ -151,7 +151,7 @@ class LoginEmailAndSocialViewController: BaseViewController {
         let clientID = ServiceApiKey.Google.kClientID
         // Create Google Sign In configuration object.
         let config = GIDConfiguration(clientID: clientID)
-    
+        
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
             if error != nil {
                 print("(error.localizedDescription)")
@@ -200,7 +200,7 @@ class LoginEmailAndSocialViewController: BaseViewController {
     /// Get Facebook User Data
     func getFBUserData() {
         if((AccessToken.current) != nil) {
-            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (_, result, error) -> Void in
+            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start { _, result, error in
                 if (error == nil) {
                     if let aResult = result as? [String : AnyObject] {
                         //   print(aResult)
@@ -213,7 +213,21 @@ class LoginEmailAndSocialViewController: BaseViewController {
                         
                     }
                 }
-            })
+                GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completion: { (_, result, error) -> Void in
+                    if (error == nil) {
+                        if let aResult = result as? [String : AnyObject] {
+                            //   print(aResult)
+                            //   print("Social Login Id : \(aResult["id"] as! String)")
+                            self.socialLoginType = SocialLoginType.facebook.rawValue
+                            self.facebookDict = aResult
+                            if let aSocialID = aResult["id"] as? String {
+                                self.callSocialLoginApi(type: self.socialLoginType, id:aSocialID)
+                            }
+                            
+                        }
+                    }
+                })
+            }
         }
     }
     
@@ -227,15 +241,15 @@ class LoginEmailAndSocialViewController: BaseViewController {
     
     func pladeApiConfiguration() {
         presentPlaidLinkUsingLinkToken()
-//        #if USE_CUSTOM_CONFIG
-//        presentPlaidLinkWithCustomConfiguration()
-//        #else
-//        presentPlaidLinkWithSharedConfiguration()
-//        #endif
+        //        #if USE_CUSTOM_CONFIG
+        //        presentPlaidLinkWithCustomConfiguration()
+        //        #else
+        //        presentPlaidLinkWithSharedConfiguration()
+        //        #endif
     }
     
     func createLinkTokenConfiguration() -> LinkTokenConfiguration {
-
+        
         let linkToken = "123"
         
         // With custom configuration using a link_token
@@ -260,22 +274,22 @@ class LoginEmailAndSocialViewController: BaseViewController {
             if let error = exit.error {
                 NSLog("Failed to link account due to: \(error.localizedDescription)\nmetadata: \(exit.metadata)")
                 self.handleError(error,
-                                    metadata: exit.metadata.metadataJSON)
+                                 metadata: exit.metadata.metadataJSON)
             }
             else {
                 NSLog("Plaid link exited with metadata: \(exit.metadata)")
                 self.handleExitWithMetadata(exit.metadata.metadataJSON)
             }
         }
-
+        
         linkConfiguration.onEvent = { event in
             print("Link Event: \(event)")
             NSLog("Link event: \(event) \nmetadata: \(event.metadata)")
         }
-
+        
         return linkConfiguration
     }
-
+    
     
     func handleSuccessWithToken(_ publicToken: String, metadata: [String : Any]?) {
         presentAlertViewWithTitle("Success", message: "token: \(publicToken)\nmetadata: \(metadata ?? [:])")
@@ -310,16 +324,16 @@ class LoginEmailAndSocialViewController: BaseViewController {
     }
     
     // MARK: Start Plaid Link in update mode
-//    func presentPlaidLinkInUpdateMode() {
-//        // <!-- SMARTDOWN_UPDATE_MODE -->
-//        let linkViewDelegate = self
-//        let linkViewController = PLKPlaidLinkViewController(publicToken: "", delegate: linkViewDelegate)
-//        if (UI_USER_INTERFACE_IDIOM() == .pad) {
-//            linkViewController.modalPresentationStyle = .formSheet
-//        }
-//        present(linkViewController, animated: true)
-//        // <!-- SMARTDOWN_UPDATE_MODE -->
-//    }
+    //    func presentPlaidLinkInUpdateMode() {
+    //        // <!-- SMARTDOWN_UPDATE_MODE -->
+    //        let linkViewDelegate = self
+    //        let linkViewController = PLKPlaidLinkViewController(publicToken: "", delegate: linkViewDelegate)
+    //        if (UI_USER_INTERFACE_IDIOM() == .pad) {
+    //            linkViewController.modalPresentationStyle = .formSheet
+    //        }
+    //        present(linkViewController, animated: true)
+    //        // <!-- SMARTDOWN_UPDATE_MODE -->
+    //    }
     
     /// Call Social Login api
     ///
@@ -406,6 +420,7 @@ class LoginEmailAndSocialViewController: BaseViewController {
     }
 }
 
+
 //extension LoginEmailAndSocialViewController: GIDSignInDelegate {
 //    // MARK: -
 //    // MARK: Mueva la lógica de signIn:didSignInForUser:withError: al bloque de devolución de llamada de signInWithConfiguration:presentingViewController:callback:
@@ -473,7 +488,7 @@ extension LoginEmailAndSocialViewController : ASAuthorizationControllerDelegate 
             self.callSocialLoginApi(type: self.socialLoginType, id: appleIDCredential.user)
             
             if let identityTokenData = appleIDCredential.identityToken,
-                let identityTokenString = String(data: identityTokenData, encoding: .utf8) {
+               let identityTokenString = String(data: identityTokenData, encoding: .utf8) {
                 print("Identity Token \(identityTokenString)")
             }
             

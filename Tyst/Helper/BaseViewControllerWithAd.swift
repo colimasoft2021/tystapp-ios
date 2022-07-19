@@ -18,7 +18,8 @@ import HBLogger
 /// Base View controller with ads
 class BaseViewControllerWithAd: UIViewController {
     /// Interstitial ads
-    var interstitialView: GADInterstitial!
+    private var interstitial: GADInterstitialAd?
+    //var interstitialView: GADInterstitial!
     /// Banner view for ads
     var bannerView: GADBannerView!
     
@@ -84,29 +85,58 @@ class BaseViewControllerWithAd: UIViewController {
     /// Reload Interstitial ad
     ///
     /// - Returns: Return Interstitial ad
-    func reloadInterstitialAd() -> GADInterstitial {
-        interstitialView = GADInterstitial(adUnitID: ADMobDetail.adUnitID)
-        interstitialView.delegate = self
+    func reloadInterstitialAd() {
+//        interstitialView = GADInterstitial(adUnitID: ADMobDetail.adUnitID)
+//        interstitialView.delegate = self
+//        let request = GADRequest()
+//        interstitialView.load(request)
+//        return interstitialView
         let request = GADRequest()
-        interstitialView.load(request)
-        return interstitialView
+        GADInterstitialAd.load(withAdUnitID: ADMobDetail.adUnitID,
+                               request: request) { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial?.fullScreenContentDelegate = self
+            interstitial = ad
+        }
     }
     
     /// Show Full ad
     func showFullAdd() {
-        if interstitialView != nil {
-            if (interstitialView.isReady == true){
-                //interstitialView.present(fromRootViewController:self)
-            } else {
-                print("ad wasn't ready")
-                interstitialView = reloadInterstitialAd()
-            }
-        } else {
-            print("ad wasn't ready")
-            interstitialView = reloadInterstitialAd()
-        }
-        
-        interstitialView.present(fromRootViewController:self)
+        if interstitial != nil {
+//            guard let interstitial = interstitial else {
+//                return
+//            }
+//            do {
+//                //try GADInterstitialAd.canPresent(interstitial)
+//                interstitial.present(fromRootViewController: self)
+//            }
+//            do {
+//                if try self.GADInterstitialAd.canPresent(fromRootViewController: self) {
+//                        self.GADInterstitialAd?.present(fromRootViewController: self)
+//                    }
+//                } catch {
+//            }
+            print("Algo")
+          } else {
+            print("Ad wasn't ready")
+              
+          }
+//        if interstitialView != nil {
+//            if (interstitialView.isReady == true){
+//                //interstitialView.present(fromRootViewController:self)
+//            } else {
+//                print("ad wasn't ready")
+//                interstitialView = reloadInterstitialAd()
+//            }
+//        } else {
+//            print("ad wasn't ready")
+//            interstitialView = reloadInterstitialAd()
+//        }
+//
+//        interstitialView.present(fromRootViewController:self)
     }
     
     /// Check internet is available
@@ -124,18 +154,37 @@ class BaseViewControllerWithAd: UIViewController {
 }
 
 // MARK: - Interstitial ads
-extension BaseViewControllerWithAd: GADInterstitialDelegate {
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        print("Did Dismiss Screen")
-    }
-    
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-         print("Ad Received")
-         if ad.isReady {
-             interstitialView.present(fromRootViewController: self)
-         }
-    }
+extension BaseViewControllerWithAd: GADFullScreenContentDelegate {
+    /// Tells the delegate that the ad failed to present full screen content.
+      func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+          print("Ad did fail to present full screen content. \(error.localizedDescription)")
+      }
+
+      /// Tells the delegate that the ad will present full screen content.
+      func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad will present full screen content.")
+      }
+
+      /// Tells the delegate that the ad dismissed full screen content.
+      func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+          //interstitial = reloadInterstitialAd()
+      }
 }
+
+// MARK: - Interstitial ads
+//extension BaseViewControllerWithAd: GADInterstitialDelegate {
+//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+//        print("Did Dismiss Screen")
+//    }
+//
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//         print("Ad Received")
+//         if ad.isReady {
+//             interstitialView.present(fromRootViewController: self)
+//         }
+//    }
+//}
 
 // MARK: - Ad Mob
 extension BaseViewControllerWithAd: GADBannerViewDelegate {
@@ -148,24 +197,24 @@ extension BaseViewControllerWithAd: GADBannerViewDelegate {
     }
     
     /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-                didFailToReceiveAdWithError error: GADRequestError) {
+    func bannerView(_ bannerView: GADBannerView,
+                didFailToReceiveAdWithError error: Error) {
         print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
     }
     
     /// Tells the delegate that a full-screen view will be presented in response
     /// to the user clicking on an ad.
-    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
         print("")
     }
     
     /// Tells the delegate that the full-screen view will be dismissed.
-    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
         print("")
     }
     
     /// Tells the delegate that the full-screen view has been dismissed.
-    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
         print("")
     }
     
